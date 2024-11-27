@@ -17,8 +17,8 @@ const fs = require('fs')
 const path = require('path');
 app.use(bodyParser.json({ limit: '10mb' })); // Limit request body size to 10MB
 app.use(cors({
-  //  origin: 'https://main-lms.vercel.app', // Set the origin to allow requests from
-  origin: 'http://localhost:3000',
+   origin: 'https://vrv-frontend-alpha.vercel.app', // Set the origin to allow requests from
+  // origin: 'http://localhost:3000',
   methods: ['GET', 'POST', 'OPTIONS','DELETE','PUT'], // Set allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // Set allowed headers
   credentials: true // Allow credentials (cookies, authorization headers)

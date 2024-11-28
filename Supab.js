@@ -570,7 +570,7 @@ console.log("kkkk",req.body)
       to: user.email,
        cc: ccEmail,
       subject: "Leave Application Status Update",
-      text: `Dear ${user.name},\n\nYour leave application for ${user.leavetype} applied on ${incrementedDate} from ${incrementedStartDate} to ${incrementedEndtDate} has been ${status}.\n\nBest regards,\nBlitz Learning Technologies Pvt. Ltd.`,
+      text: `Dear ${user.name},\n\nYour leave application for ${user.leavetype} applied on ${incrementedDate} from ${incrementedStartDate} to ${incrementedEndtDate} has been ${status}.\n\nBest regards,\nVRV Security`,
     };
 
     transporter.sendMail(mailOptions, async (error, info) => {
@@ -671,7 +671,7 @@ app.delete('/leavedetails/delete/:leaveId', async (req, res) => {
       from:'royanand729@gmail.com' ,
       to: leaveDetails.email, // Use the email from the leave details
       subject: 'Leave Application Deleted',
-      text: `Dear ${leaveDetails.name},\n\nYour leave application for ${leaveDetails.leavetype} from ${leaveDetails.startdate} to ${leaveDetails.enddate} has been deleted.\n\nRegards,\nBlitz Learning Technologies Pvt. Ltd.`,
+      text: `Dear ${leaveDetails.name},\n\nYour leave application for ${leaveDetails.leavetype} from ${leaveDetails.startdate} to ${leaveDetails.enddate} has been deleted.\n\nRegards,\nVRV Security`,
     };
 
     // Send the email

@@ -388,23 +388,19 @@ app.post('/leave-applications', async (req, res) => {
       const transporter = nodemailer.createTransport({
         service: 'gmail', // Use your email service
         auth: {
-          user: 'blitzlearningtechnologies@gmail.com',
+          user: 'royanand729@gmail.com',
           pass: 'bjpr ujij jalg bxta',
         },
       });
   
       let ccEmail;
       if (depart === 'Sales') {
-        ccEmail = ['nityanand.yadav@blitzlearning.in'];
-
-        // ccEmail = ['neti@blitzlearning.in','roshni.sarin@blitzlearning.in','abhishek@blitzlearning.in'];
+        ccEmail = ['nityanand0801@gmail.com'];
       } else {
-        ccEmail = ['nityanand.yadav@blitzlearning.in'];
-
-        // ccEmail = ['neti@blitzlearning.in','roshni.sarin@blitzlearning.in','rajeev@blitzlearning.in'];
+        ccEmail = ['nityanand0801@gmail.com'];
       }
       const mailOptions = {
-        from: 'blitzlearningtechnologies@gmail.com',
+        from: 'royanand729@gmail.com',
         to: email, // Recipient email address
         cc: ccEmail.join(', '), // Join array into comma-separated string
         subject: 'Leave Application',
@@ -556,25 +552,21 @@ console.log("kkkk",req.body)
 
     let ccEmail = [];
     if (user.department === "Sales") {
-      ccEmail = ['nityanand.yadav@blitzlearning.in'];
-
-      // ccEmail = ["neti@blitzlearning.in", 'roshni.sarin@blitzlearning.in', 'abhishek@blitzlearning.in'];
+      ccEmail = ['nityanand0801@gmail.com'];
     } else {
-      ccEmail = ['nityanand.yadav@blitzlearning.in'];
-
-      // ccEmail = ["neti@blitzlearning.in", 'roshni.sarin@blitzlearning.in', 'rajeev@blitzlearning.in'];
+      ccEmail = ['nityanand0801@gmail.com'];
     }
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "blitzlearningtechnologies@gmail.com",
+        user: "royanand729@gmail.com",
         pass: "bjpr ujij jalg bxta",
       },
     });
 
     const mailOptions = {
-      from: "blitzlearningtechnologies@gmail.com",
+      from: "royanand729@gmail.com",
       to: user.email,
        cc: ccEmail,
       subject: "Leave Application Status Update",
@@ -670,13 +662,13 @@ app.delete('/leavedetails/delete/:leaveId', async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'blitzlearningtechnologies@gmail.com',
+        user: 'royanand729@gmail.com',
         pass: 'bjpr ujij jalg bxta',
       },
     });
 
     let mailOptions = {
-      from:'blitzlearningtechnologies@gmail.com' ,
+      from:'royanand729@gmail.com' ,
       to: leaveDetails.email, // Use the email from the leave details
       subject: 'Leave Application Deleted',
       text: `Dear ${leaveDetails.name},\n\nYour leave application for ${leaveDetails.leavetype} from ${leaveDetails.startdate} to ${leaveDetails.enddate} has been deleted.\n\nRegards,\nBlitz Learning Technologies Pvt. Ltd.`,
@@ -741,14 +733,14 @@ app.put('/leavedetails/:id', async (req, res) => {
     let transporter = nodemailer.createTransport({
       service: 'gmail', // e.g., 'Gmail'
       auth: {
-        user: 'blitzlearningtechnologies@gmail.com',
+        user: 'royanand729@gmail.com',
         pass: 'bjpr ujij jalg bxta',
       }
     });
 
     // Email content
     let mailOptions = {
-      from: 'blitzlearningtechnologies@gmail.com',
+      from: 'royanand729@gmail.com',
       to: updatedLeave.email, // recipient email
       subject: 'Leave Application Updated',
       text: `Dear ${updatedLeave.name},\n\n
